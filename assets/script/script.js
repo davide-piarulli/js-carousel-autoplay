@@ -11,6 +11,7 @@ BONUS:
 
 
 // Elements
+const slider = document.querySelector('.slider');
 const itemsWrapper = document.querySelector('.items-wrapper');
 const thmbsWrapper = document.querySelector('.thmbs-wrapper');
 
@@ -99,3 +100,7 @@ const slideAuto = () => {
 }
 
 const rotate = setInterval(slideAuto, 3000);
+
+slider.addEventListener('mouseover', function (){
+  clearInterval(rotate);
+})
