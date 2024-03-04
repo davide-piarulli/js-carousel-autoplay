@@ -99,8 +99,13 @@ const slideAuto = () => {
 
 }
 
+// bonus
 const rotate = setInterval(slideAuto, 3000);
 
 slider.addEventListener('mouseover', function (){
   clearInterval(rotate);
+})
+
+slider.addEventListener('mouseout', function (){
+  rotate = setInterval(slideAuto, 3000);
 })
