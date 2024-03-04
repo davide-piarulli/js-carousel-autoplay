@@ -10,3 +10,7 @@ Per evitare conflitti con lo scroll manuale, quando il mouse si trova sopra lo s
 ## Svolgimento
 
 1. creaimo una timing function : setInterval per fare un loop infinito di scroll img con cambio img ogni 3000ms
+
+# bonus
+1. creando un eventlistener con mouseover, bisogna interrompere l'automazione
+2. inserisco altro eventlistener con mouseout per riprenderla
