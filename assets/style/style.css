@@ -34,14 +34,15 @@
 }
 
 .thmbs-wrapper{
-  height: 20%;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  background-color: black;
 }
 
 .thmbs-wrapper img{
   width: 100%;
-  height: 100%;
+  height: calc(100% / 5);
   object-fit: cover;
 }
 
@@ -84,4 +85,13 @@
 
 .btn-arrow.down{
  bottom: 10px;
+}
+
+.grey{
+  opacity: 0.5;
+}
+
+.active{
+  opacity: 1;
+  border: 2px solid white;
 }

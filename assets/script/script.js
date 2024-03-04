@@ -13,7 +13,7 @@ BONUS:
 // Elements
 const itemsWrapper = document.querySelector('.items-wrapper');
 const thmbsWrapper = document.querySelector('.thmbs-wrapper');
-const itemsCollection = document.getElementsByClassName('img');
+
 const up = document.querySelector('.up');
 const down = document.querySelector('.down');
 
@@ -31,44 +31,71 @@ const images = [
 
 console.log(images);
 
-// 2
+// 2 ciclo per inserire img in html
 for (let i = 0; i < images.length; i++) {
   const img = images[i];
-  itemsWrapper.innerHTML += `<img class="img hide" src="${img}">`;
-  thmbsWrapper.innerHTML += `<img class="thumb" src="${img}">`;
+  const imgThumb = images[i];
+
+  itemsWrapper.innerHTML += `<img class="imgb hide" src="${img}">`;
+  thmbsWrapper.innerHTML += `<img class="thumb grey" src="${imgThumb}">`;
 }
+
+const itemsCollection = document.getElementsByClassName('imgb');
+const imgMini = document.getElementsByClassName('thumb');
 
 // 2.a
 itemsCollection[counterImg].classList.remove('hide');
+imgMini[counterImg].classList.add('active');
 
 // 3
 up.addEventListener('click', function () {
 
   itemsCollection[counterImg].classList.add('hide');
+  imgMini[counterImg].classList.remove('active');
   counterImg--;
   
-  if(counterImg === images.length){
-    counterImg = 0;
+  if(counterImg < 0){
+    counterImg = images.length-1;
   }
   // 3.a
   itemsCollection[counterImg].classList.remove('hide');
-
+  imgMini[counterImg].classList.add('active');
 })
 
 
 // 3
 down.addEventListener('click', function () {
   itemsCollection[counterImg].classList.add('hide');
+  imgMini[counterImg].classList.remove('active');
   counterImg++;
 
-  if(counterImg < 0){
-    counterImg = images.length - 1;
+  if(counterImg == images.length){
+    counterImg = 0;
   }
 
   // 3.a
   itemsCollection[counterImg].classList.remove('hide');
+  imgMini[counterImg].classList.add('active');
 
-  if (counterImg === images.length - 1) {
-    itemsCollection[counterImg].appendChild(images[0]);
-  }
 })
+
+// TIMING FUNCTION
+
+let counter = 0;
+
+const slideAuto = () => {
+  itemsCollection[counter].classList.add('hide');
+  imgMini[counter].classList.remove('active');
+  counter++;
+
+  if(counter == images.length){
+    counter = 0;
+  }
+
+  // 3.a
+  itemsCollection[counter].classList.remove('hide');
+  imgMini[counter].classList.add('active');
+
+}
+
+const rotate = setInterval(slideAuto, 3000);
