@@ -1,16 +1,23 @@
 Carousel Autoplay
 ===
-**Consegna:**
 
-Riprendendo il carousel realizzato in passato  e con le Timing Function rendete lo scroll automatico ogni 3 secondi.
-Attenzione: dopo l’ultima slide deve riapparire la prima e così via
-BONUS
-Per evitare conflitti con lo scroll manuale, quando il mouse si trova sopra lo slider lo scroll automatico si interrompe per poi ripartire all’uscita del mouse
+Questo progetto è un carousel automatico di immagini sviluppato utilizzando HTML, CSS e JavaScript. Le immagini cambiano automaticamente ogni 3 secondi.
 
-## Svolgimento
+![carousel preview](https://github.com/user-attachments/assets/ce34e235-c8ae-4e1c-8570-1a9bb8ca0563)
 
-1. creaimo una timing function : setInterval per fare un loop infinito di scroll img con cambio img ogni 3000ms
+## Descrizione
 
-# bonus
-1. creando un eventlistener con mouseover, bisogna interrompere l'automazione
-2. inserisco altro eventlistener con mouseout per riprenderla
+Il carousel è progettato per mostrare una serie di immagini che si alternano automaticamente. È utile per creare gallerie di immagini, banner promozionali o qualsiasi altro tipo di contenuto visivo che necessita di rotazione automatica.
+
+## Struttura del Progetto
+
+- **index.html**: Contiene la struttura HTML del carousel.
+- **styles.css**: Contiene gli stili CSS per il design e l'animazione del carousel.
+- **scripts.js**: Contiene il codice JavaScript per la logica di cambio automatico delle immagini.
+- **assets/**: Contiene le immagini utilizzate nel carousel.
+
+## Funzionalità
+
+- **Cambio automatico delle immagini**: Le immagini cambiano automaticamente ogni 3 secondi.
+- **Navigazione manuale**: Possibilità di navigare manualmente tra le immagini.
+- **Design responsivo**: Il layout del carousel si adatta a diverse risoluzioni di schermo.
